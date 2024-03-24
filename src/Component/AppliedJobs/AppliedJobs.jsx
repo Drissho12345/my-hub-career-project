@@ -28,16 +28,23 @@ const AppliedJobs = () => {
     useEffect(()=>{
         const storedJobsIds = getStoredJobApplication();
         if(jobs.length > 0){
-            const jobApplied = jobs.filter(job => storedJobsIds.includes(job.id))
-            // const jobsApplied = [];
-            // for(const id of storedJobsIds){
-            //     const job = jobs.find(job =>job.id === id);
-            //     if(job){
-            //         jobsApplied.push(job)
-            //     }
-            // }
-            setAppiledJobs(jobs,jobApplied,storedJobsIds)
-            setDisplyJobs(jobs,jobApplied,storedJobsIds)
+
+            // const jobApplied = jobs.filter(job => storedJobsIds.includes(job.id))
+
+
+            const jobsApplied = [];
+            for(const id of storedJobsIds){
+                const job = jobs.find(job =>job.id === id);
+                if(job){
+                    jobsApplied.push(job)
+                }
+            }
+            setAppiledJobs(jobsApplied);
+            setDisplyJobs(jobsApplied);
+
+
+            // setAppiledJobs(jobs,jobApplied,storedJobsIds)
+            // setDisplyJobs(jobs,jobApplied,storedJobsIds)
         }
     },[jobs])
     return (
@@ -56,7 +63,11 @@ const AppliedJobs = () => {
             <h2 className="text-2xl">jobs I applied: {appliedJobs.length}</h2>
             <ul>
                 {
-                    displyJobs.map(job => <li key={job.id}><span>{job.job_title} {job.company_name}: {job.remote_or_onsite}</span></li>)
+                    displyJobs.map(job => <li key={job.id}><span>
+                        {job.job_title} 
+                        {job.company_name}: 
+                        {job.remote_or_onsite}
+                    </span></li>)
                 }
             </ul>
         </div>

@@ -19,12 +19,11 @@ const JobDetails = () => {
     console.log(job);
 
     const handleApplyJob = () =>{
-        saveJobApplication(id)
+        saveJobApplication(jobInt);
         toast("You have applied successfully")
     }
     return (
         <div>
-            <h2>job details of: </h2>
             <div className="grid gap-4 md:grid-cols-4"> 
                 <div className=" md:col-span-3">
                     <h2 className="text-[16px]"><b>Job Description: </b>{job.job_description}</h2>
