@@ -16,7 +16,7 @@ const JobDetails = () => {
     const {id} = useParams();
     const jobInt = parseInt(id);
     const job = jobs.find(job => job.id === jobInt);
-    console.log(job);
+    // console.log(job);
 
     const handleApplyJob = () =>{
         saveJobApplication(jobInt);

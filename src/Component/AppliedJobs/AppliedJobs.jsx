@@ -44,6 +44,7 @@ const AppliedJobs = () => {
             }
             setAppiledJobs(jobsApplied);
             setDisplyJobs(jobsApplied);
+            // console.log(jobsApplied)
 
 
             // setAppiledJobs(jobs,jobApplied,storedJobsIds)
@@ -75,7 +76,7 @@ const AppliedJobs = () => {
                                     <img className="rounded-2xl bg-[#F4F4F4]" src={job.logo} alt="" />
                                 </div>
                                 <div className="">
-                                    <p className=" font-bold">{job.job_title}</p>
+                                    <p className="font-bold">{job.job_title}</p>
                                     <p>{job.company_name}</p> 
                                     <div className="pt-2">
                                         <button className="px-5 py-2 font-extrabold border rounded border-[#7e90fe] mr-4 text-[#7e90fe]">{job.remote_or_onsite}</button>
