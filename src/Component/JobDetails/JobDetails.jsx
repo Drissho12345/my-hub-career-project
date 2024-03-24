@@ -65,7 +65,7 @@ const JobDetails = () => {
                                 <p>Email : {job.contact_information.email}</p>
                             </div>
                             <div className="flex pb-2 gap-2">
-                                <IoLocationOutline className="text-xl"></IoLocationOutline>
+                                <IoLocationOutline className="lg:text-4xl text-xl"></IoLocationOutline>
                                 <p>Address : {job.contact_information.address}</p>
                             </div>
                         </div>
