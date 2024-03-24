@@ -38,7 +38,7 @@ const JobDetails = () => {
 
                 </div>
                 <div className="">
-                    <div className="pl-4 rounded-lg pr-4 bg-stone-700">
+                    <div className="pl-4 rounded-lg pr-4 text-[#fff] bg-[#7E90FE1A]">
                         <div>
                             <h2 className="text-xl pt-4 pb-4">Job Details</h2>
                             <hr />
